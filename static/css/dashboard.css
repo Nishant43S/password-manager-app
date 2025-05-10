@@ -1,0 +1,345 @@
+*{
+    scrollbar-width: none;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+::selection{
+    color: whitesmoke;
+    background-color: #212529;
+}
+.brand-name {
+    font-size: 1.8rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.brand-highlight {
+    color: #ff8c42;
+}
+
+.form-container {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.form-toggle {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 2rem auto;
+    font-weight: 500;
+}
+
+.form-toggle:hover {
+    color: #ff8c42;
+}
+
+.form-toggle i {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.form-fields {
+    transition: all 0.3s ease;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+}
+
+.form-fields.show {
+    max-height: 500px;
+    opacity: 1;
+    margin-bottom: 1.5rem;
+}
+
+.custom-input {
+    width: 100%;
+    border-radius: 25px;
+    padding: 0.8rem 1.2rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.custom-input:focus {
+    border-color: #ff8c42;
+    box-shadow: 0 0 0 2px rgba(255, 140, 66, 0.1);
+}
+
+.btn-custom {
+    background-color: #212529;
+    color: white;
+    border-radius: 25px;
+    width: 130px;
+    height: 45px;
+    padding: 0.6rem 2rem;
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+    float: left;
+}
+
+.btn-custom:hover {
+    background-color: white;
+    border: 1px solid black;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-logout {
+    background-color: #212529;
+    color: white;
+    border-radius: 25px;
+    padding: 0.6rem 2rem;
+    width: 90px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+    background-color: white;
+    /* transform: translateY(-2px); */
+    border: 2px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.user-icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.user-icon:hover {
+    color: #ff8c42;
+}
+
+.empty-vault {
+    text-align: center;
+    color: #aaa;
+    font-size: 2.5rem;
+    margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+    .brand-name {
+        font-size: 1.5rem;
+    }
+    
+    .form-container {
+        padding: 0 0;
+    }
+    .btn-save{
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .empty-vault {
+        font-size: 1.8rem;
+        margin-top: 3rem;
+    }
+    .btn-logout{
+        width: 98px;
+        height: 30px;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .user-icon{
+        font-size: 20px;
+    }
+    .btn-custom{
+        width: 128px;
+        height: 35px;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+}
+.card {
+    width: 100%;
+    max-width: 6460px;
+    border-radius: 10px;
+    /* padding: 34px; */
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 34px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease-in;
+}
+
+.card:hover{
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4); ;
+}
+
+.credential-row {
+    display: grid;
+    grid-template-columns: 120px 1fr 30px;
+    margin-bottom: 10px;
+    align-items: center;
+    transition: 0.3s ease-in;
+}
+
+.credential-label {
+    font-weight: 500;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.form-control {
+    border: none;
+    border-bottom: 1px solid #000;
+    border-radius: 0;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #fd7e14;
+}
+
+.btn-action {
+    background: transparent;
+    border: none;
+    padding: 5px;
+    color: #212529;
+    transition: all 0.3s ease;
+}
+
+.btn-action:hover {
+    color: #fd7e14;
+    /* transform: scale(1.1); */
+
+}
+
+.btn-save {
+    background-color: #212529;
+    color: white;
+    border-radius: 25px;
+    padding: 8px 26px;
+    height: 30px;
+    border: none;
+    transition: all 0.3s ease;
+    float: left;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-save:hover {
+    background-color: #fff;
+    border: 1px solid #212529;
+    color: #212529;
+}
+
+@media (max-width: 576px) {
+    /* .card {
+        padding: 15px;
+    } */
+    
+    .credential-row {
+        grid-template-columns: 100px 1fr 30px;
+    }
+}
+.container-card{
+    padding: 11px;
+}
+
+/* copy to clip board */
+.copy-link {
+    color: #212529;
+    text-decoration: none;
+    margin-left: 33px;
+    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.text-copy{
+    display: none;
+}
+.copy-link:hover {
+    color: #fd7e14;
+}
+
+.tooltip {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: black;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.show-tooltip {
+    opacity: 1;
+    transform: translate(-50%, -10px);
+}
+/* form */
+/* .form-toggle, */
+
+/* Keep your existing search styles */
+/* Keep your existing search styles */
+#search {
+position: relative; /* changed from sticky to allow .search-wrapper to handle it */
+background: white;
+z-index: 9;
+padding: 10px;
+width: 100%;
+box-sizing: border-box;
+/* border-bottom: 1px solid #ccc; */
+left: 0;
+/* box-shadow: 23px 0 7px whitesmoke ; */
+/* box-shadow: 0 -4px 16px -2px rgba(255, 255, 255, 0.8); */
+/* box-shadow: 0 -4px 6px -2px rgba(0, 0, 0, 0.2); */
+box-shadow: 0 0 8px rgba(0, 0, 0, 0.4); /* even glow on all sides */
+}
+
+/* Sticky wrapper for search + fade */
+.search-wrapper {
+position: sticky;
+top: 1px; /* Adjust if toggle bar height changes */
+z-index: 9;
+background: white;
+padding-bottom: 2px; /* reserve space for fade */
+}
+
+/* Curved fade effect below search */
+.fade-below-search {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 4px;
+background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), white);
+border-bottom-left-radius: 250px;
+border-bottom-right-radius: 250px;
+pointer-events: none;
+z-index: 8;
+}

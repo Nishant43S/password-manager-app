@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecqureNest</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+
+    <!-- logo -->
+  <link rel="icon" href="{{ url_for('static', filename='assets/logo.png') }}" sizes="16x16" type="image/png">
+  <link rel="icon" href="{{ url_for('static', filename='assets/logo.ico') }}" sizes="16x16" type="image/x-icon">
+  
+  <!-- logo -->
+  <link rel="icon" href="{{ url_for('static', filename='assets/logo.png') }}" sizes="32x32" type="image/png">
+  <link rel="icon" href="{{ url_for('static', filename='assets/logo.ico') }}" sizes="32x32" type="image/x-icon">
+
+  <!-- logo -->
+  <link rel="icon" href="{{ url_for('static', filename='assets/logo.png') }}" sizes="64x64" type="image/png">
+  <link rel="icon" href="{{ url_for('static', filename='assets/logo.ico') }}" sizes="64x64" type="image/x-icon">
+
+  <link rel="icon" href="{{ url_for('static', filename='assets/logo.png') }}" sizes="128x128" type="image/png">
+  <link rel="icon" href="{{ url_for('static', filename='assets/logo.ico') }}" sizes="128x128" type="image/x-icon">
+
+  <link rel="icon" href="{{ url_for('static', filename='assets/logo.png') }}" sizes="70x70" type="image/png">
+  <link rel="icon" href="{{ url_for('static', filename='assets/logo.ico') }}" sizes="70x70" type="image/x-icon">
+
+  <link rel="icon" href="{{ url_for('static', filename='assets/png') }}" sizes="150x150" type="image/png">
+  <link rel="icon" href="{{ url_for('static', filename='assets/logo.ico') }}" sizes="150x150" type="image/x-icon">
+
+  <link rel="icon" href="{{ url_for('static', filename='assets/logo.png') }}" sizes="310x310" type="image/png">
+  <link rel="icon" href="{{ url_for('static', filename='assets/logo.ico') }}" sizes="310x310" type="image/x-icon">
+
+  <link rel="icon" href="{{ url_for('static', filename='assets/logo.png') }}" sizes="192x192" type="image/png">
+  <link rel="icon" href="{{ url_for('static', filename='assets/logo.ico') }}" sizes="192x192" type="image/x-icon">
+
+  <link rel="icon" href="{{ url_for('static', filename='assets/logo.png') }}" sizes="512x512" type="image/png">
+  <link rel="icon" href="{{ url_for('static', filename='assets/logo.ico') }}" sizes="512x512" type="image/x-icon">
+
+</head>
+<body>
+    <div class="login-container">
+        <div class="text-center landing">
+            <div class="email-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                </svg>
+            </div>
+            <h1>Welcome again!</h1>
+            <p class="subtitle">Please enter your details</p>
+        </div>
+        
+        <form id="loginForm" onsubmit="return validateForm()" method="post">
+            <div class="form-floating">
+                <input type="email" class="form-control" name="email" id="emailInput" placeholder="Email">
+                <label for="emailInput">Email</label>
+                <div id="emailError" class="error-message"></div>
+            </div>
+            
+            <div class="form-floating">
+                <input type="password" name="password" class="form-control" id="passwordInput" placeholder="Password">
+                <label for="passwordInput">Password</label>
+                <span class="password-toggle" id="passwordToggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                    </svg>
+                </span>
+                <div id="passwordError" class="error-message"></div>
+            </div>
+            
+            <div class="forgot-password ">
+                {% if error_msg %}
+                    <p style="color: #dc3545;">{{ error_msg }}</p>
+                {% endif %}
+            </div>
+            
+            <button type="submit" class="btn btn-login w-100">Log In</button>
+            <button type="button" onclick="window.location.href='/register'"
+            class="btn btn-register w-100">
+            Register
+        </button>
+    </form>
+</div>
+<div class="key-glow"></div>
+    
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="{{ url_for('static', filename='js/login.js') }}">
+        
+    </script>
+    <script>
+        // Disable right click
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    // Block common devtools keys
+    document.addEventListener('keydown', function(e) {
+    if (
+        e.key === "F12" || 
+        (e.ctrlKey && e.shiftKey && ["I", "J", "C"].includes(e.key)) ||
+        (e.ctrlKey && e.key === "U")
+    ) {
+        e.preventDefault();
+    }
+    });
+
+    // Detect if DevTools is open
+    (function() {
+    const threshold = 160;
+    setInterval(() => {
+        const devtools = window.outerWidth - window.innerWidth > threshold || 
+                        window.outerHeight - window.innerHeight > threshold;
+        if (devtools) {
+        document.body.innerHTML = "<h1>DevTools is not allowed</h1>";
+        }
+    }, 1000);
+    })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+*{
+    scrollbar-width: none;
+}
+::selection{
+    color: whitesmoke;
+    background-color: #212529;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.back-link {
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: color 0.3s, transform 0.3s;
+}
+.back-link:hover {
+    color: #ff8c00;
+    transform: translateX(-5px);
+}
+h1 {
+    color: #555;
+    margin-bottom: 30px;
+}
+.profile-section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+.user-info {
+    margin-bottom: 20px;
+}
+.user-info p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.password-field {
+    position: relative;
+}
+.password-toggle {
+    position: absolute;
+    right: 0;
+    padding-right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #555;
+}
+.description {
+    margin: 30px 0;
+    color: #555;
+}
+.form-control:focus {
+    border-color: #110303;
+    box-shadow: 0 0 0 0.25rem rgba(85, 85, 85, 0.25);
+}
+.error-message {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+.form-check-input {
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+}
+.form-check-input:checked {
+    background-color: #000;
+    border-color: #000;
+}
+.form-check-label {
+    margin-left: 10px;
+    font-size: 16px;
+    display: block ;
+}
+.warning-message {
+    color: #dc3545;
+    margin: 20px 0;
+}
+button:disabled {
+    cursor: not-allowed;
+}
+.delete-btn {
+    background-color: #dc3545;
+    border: none;
+    padding: 8px 5px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    width: 130px;
+    font-size: 13px;
+}
+.delete-btn:hover {
+    background-color: #c82333;
+}
+.pass {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .delete-btn{
+        width: 110px;
+        font-size: 12px;
+    }
+}
+
+
+.landing {
+    animation: slideDown 0.8s ease-out forwards;
+    position: relative;
+    opacity: 0;
+}
+
+@keyframes slideDown {
+  0% {
+      top: -50px;
+      opacity: 0;
+  }
+  100% {
+      top: 0;
+      opacity: 1;
+  }
+}
