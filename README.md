@@ -48,7 +48,7 @@ A secure and user-friendly **Password Manager** built using **HTML, CSS, JavaScr
    - On successful authentication, a user session is created.
 
 2. **Dashboard Access**
-   - Upon login, users are redirected to the Dashboard.
+   - after login, users are redirected to the Dashboard.
    - Users can:
      - Add credentials (with fields for website, username, password)
      - Edit or delete existing credentials
@@ -82,8 +82,50 @@ pip install -r requirements.txt
 ```
 
 
-reun locally
+
+run locally
 ```bash
 python app.py
+```
+
+## screenshots
+
+![Screenshot 2025-05-13 122027](https://github.com/user-attachments/assets/e9edcbe2-7aba-47a1-a235-cb61f3ce7d85)
+
+
+
+
+
+![Screenshot 2025-05-13 122140](https://github.com/user-attachments/assets/7ebb910c-a995-4b23-b1fd-897c774b1665)
+
+
+
+![Screenshot 2025-05-13 122237](https://github.com/user-attachments/assets/721c4843-7209-45d8-8acd-02c6d75886d9)
+
+
+
+
+![Screenshot 2025-05-13 122353](https://github.com/user-attachments/assets/42d730f2-b7d4-4efe-9fa9-8453d3204713)
+
+
+
+![Screenshot 2025-05-13 122437](https://github.com/user-attachments/assets/19a6c8b2-f5fa-4a5d-b497-ace7e0caf64f)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ```
 
