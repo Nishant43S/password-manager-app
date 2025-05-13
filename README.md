@@ -2,7 +2,7 @@
 
 A secure and user-friendly **Password Manager** built using **HTML, CSS, JavaScript, Python (Flask), Bootstrap 5, and Firebase**. This app allows users to register or log in and manage their sensitive credentials safely and efficiently. Data is securely stored in Firebase Realtime Database, and the app is protected with a firewall for enhanced security.
 
-🚀 **Live Demo**: [https://password-manager-r7dm.onrender.com/](https://password-manager-r7dm.onrender.com/)
+🚀 **Live Demo**: [password manager](https://password-manager-r7dm.onrender.com/)
 
 ---
 
@@ -73,21 +73,17 @@ A secure and user-friendly **Password Manager** built using **HTML, CSS, JavaScr
 
 ---
 
-## 📷 Screenshots
 
-| Login/Register | Dashboard | Add/Edit Credential |
-|----------------|-----------|---------------------|
-| ![login](https://via.placeholder.com/300x180?text=Login+Page) | ![dashboard](https://via.placeholder.com/300x180?text=Dashboard) | ![add](https://via.placeholder.com/300x180?text=Add+Credential) |
+Install dependencies:
 
----
+install requirements
+```bash
+pip install -r requirements.txt
+```
 
-## 🚀 Try It Live
 
-👉 **Live App**: [https://password-manager-r7dm.onrender.com/](https://password-manager-r7dm.onrender.com/)
-
-> 📝 *Note: If you encounter a slight delay when opening the app, it's due to Render's free-tier cold start.*
-
----
-
-## 📁 Project Structure
+reun locally
+```bash
+python app.py
+```
 
