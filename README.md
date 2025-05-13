@@ -74,7 +74,7 @@ A secure and user-friendly **Password Manager** built using **HTML, CSS, JavaScr
 ---
 
 
-Install dependencies:
+## run in local
 
 install requirements
 ```bash
