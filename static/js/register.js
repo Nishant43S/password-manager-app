@@ -93,28 +93,5 @@ function validateForm() {
     return valid; // Prevent form submission if false
 }
 
-// Disable right click
-document.addEventListener('contextmenu', event => event.preventDefault());
 
-// Block common devtools keys
-document.addEventListener('keydown', function(e) {
-  if (
-    e.key === "F12" || 
-    (e.ctrlKey && e.shiftKey && ["I", "J", "C"].includes(e.key)) ||
-    (e.ctrlKey && e.key === "U")
-  ) {
-    e.preventDefault();
-  }
-});
 
-// Detect if DevTools is open
-(function() {
-  const threshold = 160;
-  setInterval(() => {
-    const devtools = window.outerWidth - window.innerWidth > threshold || 
-                     window.outerHeight - window.innerHeight > threshold;
-    if (devtools) {
-      document.body.innerHTML = "<h1>DevTools is not allowed</h1>";
-    }
-  }, 1000);
-})();
